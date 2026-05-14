@@ -31,9 +31,3 @@ If you want to learn the same way:
 
 Files named `NN-concept.py`. Two digits, dash, concept.
 Comments explain the why, not just the what.
-
-## Progress
-
-| # | Concept | Date |
-|---|---------|------|
-| 01 | Functions, hysteresis, try/except | 14.05.2026 |
