@@ -11,7 +11,7 @@ except:
     target = 10
 
 ####################################################
-#funktion die die temperatur mit target abgleicht
+#Function that compares the temperature with the target
 ####################################################
 def switch(temp, target):
     if temp < (target - 1):
@@ -22,7 +22,7 @@ def switch(temp, target):
         return "SAME"
 
 ####################################################
-#funktion die die das ergebnis ausgibt
+#Function that outputs the result
 ####################################################
 def state_output(temp, target):
     ergebnis = switch(temp, target)
