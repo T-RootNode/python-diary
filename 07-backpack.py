@@ -34,50 +34,50 @@ YOUR TOOLS: LISTS (lists)
   len(backpack)
   (If it is 0, the backpack is empty!)
 
-----------------------------------------------------------------------
-CRITICAL ADHS-RULES (Avoid Overwhelm):
-1. Build the features ONE BY ONE.
-2. Start with Option 4 (Exit) so you can close the game.
-3. Then build Option 2 (Add) and Option 1 (View) to see if it works.
-4. Build Option 3 (Drop) last. Remember to check if the backpack
-   is empty BEFORE using .pop(), otherwise the game crashes!
-
-Go for it! Write your code right below this block.
 ======================================================================
 """
 
-def show_menue():
-    print("=========Welcome to the Backpack Game=========")
+def show_menu():
+    print("========= Welcome to the Backpack Game =========")
     print()
     print("Please use numbers as input")
     print()
-    print("1) view")
-    print("2) add")
-    print("3) drop")
-    print("4) quit")
+    print("1) View")
+    print("2) Add")
+    print("3) Drop")
+    print("4) Quit")
 
 backpack = []
 
 while True:
-    show_menue()
-    input_raw = input("input here please:")
+    show_menu()
+    input_raw = input("Input here please: ")
 
     if not input_raw.isdigit():
-        print("Sadly that was not a number.")
+        print("Sadly, that was not a number.")
         continue
     input_int = int(input_raw)
 
     if input_int == 4:
-        print("bye see you soon.")
+        print("Goodbye, see you soon!")
         break
+
     if input_int == 2:
-        new_item = input("What you like to add to your Backpack:")
+        new_item = input("What would you like to add to your backpack?: ")
         backpack.append(new_item)
+        print(f"'{new_item}' has been added to your backpack.")
+
     if input_int == 1:
-        print(f"In your Backpack is: {backpack}")
+        if len(backpack) == 0:
+            print("Your backpack is currently empty.")
+        else:
+            print(f"In your backpack is: {backpack}")
+
     if input_int == 3:
         if len(backpack) == 0:
-            print("there is nothing to drop.")
+            print("There is nothing to drop.")
         else:
-            print("Drop the last item in the Backpack")
+            # Clever move: we check the last item BEFORE popping it
+            removed_item = backpack[-1]
             backpack.pop()
+            print(f"Dropped the last item from the backpack: '{removed_item}'")
