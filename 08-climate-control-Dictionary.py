@@ -1,13 +1,4 @@
 """
-MISSION: PROJECT FROSTBITE - THE SMART HOME CLIMATE MATRIX
-
-STORY:
-You are running the climate control matrix for a sensitive greenhouse sector.
-If the temperature gets too high, the crops spoil. If it gets too cold, they freeze.
-Your job is to build an interactive simulation loop.
-
---------------------------------------------------------------------------------
-
 TECHNICAL REQUIREMENTS:
 
 1. The State Dictionary:
